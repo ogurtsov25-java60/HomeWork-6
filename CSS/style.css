@@ -12,24 +12,21 @@ html {
 }
 
 .gallery--item_image {
-    display: flex;
+    display: inline-block;
     width:15rem;
     height:15rem;
     object-fit: cover;
 
 }
 .gallery {
-    display: block;
-    list-style: none;
-    max-height: 60vh;
-    overflow: auto;
-    padding: 1px;
-    margin-right:6px;
-
-
+    display: inline-block;
+    flex-direction: column;
+    height: 500px;
+    object-fit: cover;
+    overflow:auto;
 }
 .gallery--item_title {
-    display: inline-block;
+    display: flex;
     width:15rem;
     font-size: 2.5rem;
     background-color: aliceblue;
@@ -81,8 +78,14 @@ body{
     background-image: url(../images/liquid-cheese.svg);
     background-size: cover;
 }
-@media screen and (min-width: 501px) {
+@media screen and (max-width: 731px) {
    .general--design{
-   flex-wrap:wrap-reverse;
+    flex-wrap: wrap-reverse;
+   }
+   
+    .gallery{
+        display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
    }
 }
