@@ -1,0 +1,88 @@
+html {
+    font-size: 62.5%;
+}
+.logo {
+    display: inline-block;
+    font-size: 2rem;
+    text-align:center;
+    background-color: azure;
+    border: 3px solid black;
+    width: 650px;
+    height: 60px;
+}
+
+.gallery--item_image {
+    display: flex;
+    width:15rem;
+    height:15rem;
+    object-fit: cover;
+
+}
+.gallery {
+    display: block;
+    list-style: none;
+    max-height: 60vh;
+    overflow: auto;
+    padding: 1px;
+    margin-right:6px;
+
+
+}
+.gallery--item_title {
+    display: inline-block;
+    width:15rem;
+    font-size: 2.5rem;
+    background-color: aliceblue;
+    text-align: center;
+    overflow:auto;
+}
+.gallery--item_image {
+    display: flex;
+}
+.gallery--item {
+    border: 2px solid lightgrey;
+    border-radius: 40px;
+    overflow: hidden;
+    width: 15rem;
+
+}
+.general--design{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.general--image{
+    clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 70%, 70% 100%, 0 100%, 0% 70%, 0% 30%);
+    margin-top: 30px;
+    width: 480px;
+    height: auto;
+    margin-left: 5px;
+    
+}
+.title--general--image{
+    display: flex;
+    background: white;
+    font-size: 20px;
+    border:3px solid rgb(17, 17, 17);
+    align-items: center;
+    width: 150px;
+    margin-top: -20px;
+    position: relative;
+   
+}
+.headerlogo{
+    display: flex;
+    justify-content: center;
+}
+.gallery--item_image:hover{
+    filter:blur(3px);
+}
+body{
+    background-image: url(../images/liquid-cheese.svg);
+    background-size: cover;
+}
+@media screen and (min-width: 501px) {
+   .general--design{
+   flex-wrap:wrap-reverse;
+   }
+}
