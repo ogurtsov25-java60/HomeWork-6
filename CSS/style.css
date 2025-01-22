@@ -26,7 +26,7 @@ html {
     overflow:auto;
 }
 .gallery--item_title {
-    display: flex;
+    display: inline-block;
     width:15rem;
     font-size: 2.5rem;
     background-color: aliceblue;
@@ -35,6 +35,7 @@ html {
 }
 .gallery--item_image {
     display: flex;
+    justify-content: center;
 }
 .gallery--item {
     border: 2px solid lightgrey;
@@ -78,14 +79,70 @@ body{
     background-image: url(../images/liquid-cheese.svg);
     background-size: cover;
 }
-@media screen and (max-width: 731px) {
-   .general--design{
+@media screen and (min-width: 390px) {
+   .general--image{
+    width: 380px;
+   }
+    .general--design{
     flex-wrap: wrap-reverse;
    }
    
     .gallery{
-        display: flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
    }
 }
+@media screen and (min-width: 844px){
+    .general--design{
+        flex-wrap: wrap-reverse;
+       }
+       
+        .gallery{
+            display: inline-block;
+            flex-direction: column;
+            height: 300px;
+            object-fit: cover;
+            overflow:auto;
+            padding: 5px;
+       }
+       .general--image{
+        margin-left: 80px;
+        
+       }
+       .body{
+        height: 390px;
+       }
+    }
+    @media screen and (min-width: 1000px){
+        .gallery {
+            display: inline-block;
+            flex-direction: column;
+            height: 500px;
+            object-fit: cover;
+            overflow:auto;
+        }
+        .general--design{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .general--image{
+            clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 70%, 70% 100%, 0 100%, 0% 70%, 0% 30%);
+            margin-top: 30px;
+            width: 675px;
+            height: auto;
+            margin-left: 5px;}
+        .logo{
+            width: 850px;
+        }
+        h3{
+            font-size: 30px;
+        }
+        .logo{
+    
+            padding: 20px;
+        }
+        
+    }
+
